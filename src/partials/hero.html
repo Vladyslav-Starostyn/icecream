@@ -1,0 +1,104 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero__back"></div>
+    <h1 class="hero__title">
+      ice cream made with <span class="hero__title--accent">passion</span>
+    </h1>
+    <ul class="hero__list-btn">
+      <li class="hero__item-btn">
+        <a class="hero__btn" href="#ourproduct">Products</a>
+      </li>
+      <li class="hero__item-btn">
+        <a class="hero__btn hero__btn--invers" href="#howitismade"
+          >How it’s made?</a
+        >
+      </li>
+    </ul>
+    <ul class="hero__list-numbers">
+      <li class="hero__item-numbers">
+        <p class="hero__text">
+          <span class="hero__number">16</span>
+          cafes
+        </p>
+      </li>
+      <li class="hero__item-numbers">
+        <p class="hero__text">
+          <span class="hero__number">23</span>
+          food trucks
+        </p>
+      </li>
+    </ul>
+    <picture class="hero__icecream">
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          images/desktop/desk-icecream-1x.png 1x,
+          images/desktop/desk-icecream-2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          images/tablet/tab-icecream-1x.png 1x,
+          images/tablet/tab-icecream-2x.png 2x
+        "
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          images/mobile/mob-icecream-1x.png 1x,
+          images/mobile/mob-icecream-2x.png 2x
+        "
+      />
+
+      <img src="images/mobile/mob-icecream-1x.png" alt="icecream" />
+    </picture>
+    <div class="hero__wrapper">
+      <picture class="hero__milk">
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            images/desktop/desk-milk-1x.png 1x,
+            images/desktop/desk-milk-2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            images/tablet/tab-milk-1x.png 1x,
+            images/tablet/tab-milk-2x.png 2x
+          "
+        />
+        <img src="images/tablet/tab-milk-1x.png" alt="milk" />
+      </picture>
+      <div class="hero__milk-wrapper">
+        <p class="hero__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <a href="#howitismade" class="hero__link">
+          <svg class="hero__icon">
+            <use href="images/symbol-defs.svg#icon-arrow-large"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <picture class="hero__tasty">
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          images/desktop/desk-tasty-1x.png 1x,
+          images/desktop/desk-tasty-2x.png 2x
+        "
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          images/tablet/tab-tasty-1x.png 1x,
+          images/tablet/tab-tasty-2x.png 2x
+        "
+      />
+      <img src="images/tablet/tab-tasty-1x.png" alt="milk" />
+    </picture>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal__close" data-modal-close>
+      <svg width="18px" height="18px">
+        <use href="images/symbol-defs.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+    <p class="modal__action">We will call you</p>
+    <form class="modal__form">
+      <div class="modal__field">
+        <label class="modal__label" for="user-name">Name</label>
+        <div class="modal__wrap-input">
+          <input
+            type="text"
+            name="user-name"
+            class="modal__input"
+            placeholder=" "
+            id="user-name"
+            required
+          />
+          <svg class="modal__icon" width="14px" height="14px">
+            <use href="images/symbol-defs.svg#icon-name"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__field">
+        <label class="modal__label" for="tel">Phone number</label>
+        <div class="modal__wrap-input">
+          <input
+            type="tel"
+            name="user-tel"
+            class="modal__input"
+            placeholder=" "
+            id="tel"
+            required
+          />
+          <svg class="modal__icon" width="14px" height="14px">
+            <use href="images/symbol-defs.svg#icon-tel"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__field">
+        <label class="modal__label" for="email">Mail</label>
+        <div class="modal__wrap-input">
+          <input
+            type="email"
+            name="user-email"
+            class="modal__input"
+            placeholder=" "
+            id="email"
+            required
+          />
+          <svg class="modal__icon" width="14px" height="14px">
+            <use href="images/symbol-defs.svg#icon-mail"></use>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="conditions"
+          class="modal__agree visually-hidden"
+          id="conditions"
+          required
+        />
+        <label class="modal__agree-label" for="conditions">
+          <span>
+            <svg class="modal__check" width="16px" height="15px">
+              <use href="images/symbol-defs.svg#icon-check"></use>
+            </svg>
+          </span>
+          I agree to the newsletter and accept&nbsp;<a
+            href=""
+            class="link modal__link"
+            >The terms of the contract</a
+          >
+        </label>
+      </div>
+        <div class="modal__btn">
+            <button type="submit" class="button modal__button">
+                Send
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,439 @@
+p {
+    margin: 0
+}
+.about {
+    
+    padding-bottom: 40px;
+    background: var(--howitsmade-bg-color);
+    @media screen and (min-width: $tablet) {
+        padding-bottom: 80px;
+    }
+        @media screen and (max-width: $tablet) {
+            padding-top: 40px;}
+        @media screen and (min-width: 768px) and (max-width: 1279.9px) {
+        padding-top: 20px;  }
+         @media screen and (min-width: $desktop) {
+             padding-top: 60px;
+            padding-bottom: 60px;
+         }
+}
+
+// .about {
+//     @media screen and (max-width:767px) {
+//         background-image: url(..//images/mobile/mob-bcg-milk-1x.png);
+//         background-repeat: no-repeat;
+//         background-attachment: scroll;
+//         background-size: contain;
+//     }
+
+//     @media screen and (max-width:479px) {
+//         background-position: 0% 72%;
+//     }
+
+//     @media screen and (min-width: 480px) and (max-width: 767px) {
+//         background-position: 50% 70%;
+//     }
+
+
+// }
+
+
+
+// Для телефона
+
+
+
+.about {
+    @media screen and (max-width:767px) {
+        // height: 320px;
+        // width: 15%;
+        // background-size: contain;
+        background-image: 
+        url(..//images/mobile/milk-mobile/1x/mob-bcg-milk-1x_left.png),
+         url(..//images/mobile/milk-mobile/1x/mob-bcg-milk-1x_right.png);
+        background-repeat: no-repeat;
+        background-position: 0 74%, right 74%;
+        background-size: 47px, 71px;
+        
+    }
+}
+@media screen and (max-width:767.9px) {
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution:192dpi),
+(min-resolution:2dppx) {
+    .about {
+        background-image: 
+        url(..//images/mobile/milk-mobile/2x/mob-bcg-milk-2x_left.png),
+        url(..//images/mobile/milk-mobile/2x/mob-bcg-milk-2x_right.png);
+                background-position: 0 74%, right 74%;
+                background-repeat: no-repeat;
+                background-size: 47px, 71px;
+    }
+}}
+
+
+// Для пк
+
+@media screen and (min-width: $desktop) {
+    .about {
+    background-image: 
+    url(..//images/desktop/milk-desktop/1x/desk-bcg-milk-1x_left.png),
+     url(..//images/desktop/milk-desktop/1x/desk-bcg-milk-1x_right.png);
+        background-position: 0 94%, right 89%;
+        background-repeat: no-repeat;
+        background-size: 180px, 305px;
+    }
+}
+@media screen and (min-width: $desktop) {
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution:192dpi),
+    (min-resolution:2dppx) {
+        .about {
+          
+            background-image: 
+            url(..//images/desktop/milk-desktop/2x/desk-bcg-milk-2x_left.png),
+            url(..//images/desktop/milk-desktop/2x/desk-bcg-milk-2x_right.png);
+            background-position: 0 94%, right 89%;
+            background-repeat: no-repeat;
+            background-size: 180px, 305px;
+           
+        }
+    }
+}
+
+// @media screen and (min-device-pixel-ratio: 2),
+// (min-resolution:192dpi),
+// (min-resolution:2dppx) {
+//     .about {
+//         background-image: url(..//images/mobile/milk-mobile/2x/mob-bcg-milk-2x_left.png),
+//             url(..//images/mobile/milk-mobile/2x/mob-bcg-milk-2x_right.png);
+//     }
+// }
+
+
+
+
+
+.about-title{
+    @media screen and (max-width:$tablet ){
+    margin-bottom: 32px}  
+    
+}
+.about-text {
+    
+    @extend %secondary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.16;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+    color: var(--light-pink-color);
+
+     @media screen and (min-width: $tablet) {
+          
+     margin-bottom: 16px;
+     font-size: 26px;
+     line-height: 1.15;
+        }
+         @media screen and (min-width: $desktop) {
+                  
+       margin-bottom: 16px;
+      font-size: 30px;
+      line-height: 1.13;
+                 }
+
+}
+
+
+.about-name {
+         @extend %secondary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--dark-pink-color);
+        margin: 0;
+    @media screen and (min-width: $tablet) {
+            font-size: 48px;
+                line-height: 1.14;
+                margin-bottom: 40px;}
+    
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 60px;
+        font-size: 58px;
+            line-height: 1.13;
+        }
+}
+
+.about-img{
+    width: 100%;
+}
+.about-list__item {
+        margin-bottom: 40px;
+        @media screen and (max-width: $tablet) {
+            margin-top: 40px;
+        }
+}
+
+.about-list__item--another{
+   margin-bottom: 20px;
+@media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+    }
+}
+.about-picture {
+    @media screen and (min-width: 480px) and (max-width: 767.9px){
+    display: flex;
+    justify-content: center;}
+        @media screen and (min-width: $tablet) {
+         margin-right: 32px;
+        }
+         @media screen and (min-width: $desktop) {
+        margin-right: 139px
+         }
+    &:hover,
+     &:focus {transform: scale(1.1);}
+    transition: transform var(--duration)var(--timing-function);
+    
+}
+
+.about-pozition{
+    @media screen and (min-width: 480px) and (max-width: 767.9px) {
+        display: flex;
+        flex-direction: column;
+         align-items: center;
+            }
+               @media screen and (min-width: 768px)  
+               {display: flex;}
+    }
+
+ .about-div{
+    @media screen and (min-width: $desktop) {
+        width: 428px;
+    padding-top: 72px;
+}
+    @media screen and (min-width: 768px) and (max-width:1279.9px) 
+    {width: 322px;}
+        @media screen and (max-width: $tablet) {
+            padding-top: 40px;
+        }
+ }
+.about-picture__another{
+    width: 100%;
+    
+}
+.about-list__text {
+    width: 74%;
+       
+    margin-bottom: 40px;
+    font-weight: 500;
+        font-size: 12px;
+        line-height: 1.58;
+    color: var(--primary-black-color);
+
+    @media screen and (min-width: 480px) and (max-width:767.9px) {
+        width: 210px;}
+
+    @media screen and (min-width: $tablet) {
+        width: 334px;
+        font-size: 14px;
+        line-height: 1.78;}
+            
+        
+        @media screen and (min-width: $desktop) {
+            width:428px;
+            
+                margin-bottom: 32px;
+             font-size: 16px;
+            line-height: 1.75;
+        }
+
+         
+        
+}
+.another{
+    margin-top: 10px;
+    @media screen and (min-width: $desktop) {
+        margin-top: 22px;}
+}
+.about-list__desc {
+         width: 73%;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.58;
+        color: var(--text-gray-color);
+
+    
+@media screen and (min-width: 480px) and (max-width:767.9px) {
+    width: 210px;
+
+}
+    @media screen and (min-width: $tablet) {
+        width: 322px;
+        letter-spacing: 0.04em;
+        font-size: 14px;
+        line-height: 1.78;   
+        }
+        @media screen and (min-width: $desktop) {
+            width: 440px;
+            letter-spacing: 0.04em;
+            font-size: 14px;
+            line-height: 1.92;
+        }
+                
+}
+.about-btn {
+    
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        transition: background var(--duration) var(--timing-function);
+        color: #D41443;
+        width: 176px;
+        height: 44px;
+        background: var(--primary-white-color);
+        border-radius: 22px;
+        cursor: pointer;
+        @media screen and (min-width: $tablet) {
+            margin-top: 40px;
+        }
+        &:hover,
+        &:focus {
+         background: var(--button-bg-hover-color);
+        }     
+}
+
+.about-svg {
+    margin-left: 13px;
+    --color1: var(--dark-pink-color);
+    
+}
+.about-backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    
+}
+.about-backdrop {
+    transition: opacity .3s, visibility .3s;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 20;
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    
+}
+
+.about-modal {
+    width: 100%;
+    position: relative;
+    padding: 40px 25px;
+    
+    background-color: #FFF5F6;
+    top: 50%;
+    left: 50%;
+    border-radius: 6px;
+    transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 480px) and (max-width:767.9px) {
+            width: 450px;
+        }
+        @media screen and (min-width: $tablet) {
+          width: 560px; }
+       @media screen and (min-width: $desktop) {
+         width: 680px; 
+         padding: 54px;  }
+   @media screen and (max-width: $desktop) {
+.about-item__another {
+    display: none;
+}
+}
+ @media screen and (max-width: $tablet) {
+     .about-modal__text__another{display: none;}
+    }
+
+}
+.about-modal__text{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 194%;
+    letter-spacing: 0.04em;
+    color: #907E82;
+}
+
+.about-btn_anoter {
+    stroke: var(--primary-white-color);
+    position: absolute;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: var(--light-pink-color);
+    top: 2%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        &:hover,
+        &:focus{
+            background-color: #D41443;
+        }
+    transition: background-color var(--duration) var(--timing-function);
+}
+
+
+.about-item{
+    margin-bottom: 15px;
+    
+        &:last-child {
+            margin-bottom: 0px;
+        }
+}
+.about-list{
+    margin-top: 20px;
+    
+        @media screen and (min-width: $desktop) {
+    margin-top: 30px;
+    
+        }
+}
+
+
+.about-name__another{
+ @extend %secondary-font;
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: var(--dark-pink-color);
+margin: 0;
+
+
+@media screen and (min-width: $tablet) {
+    font-size: 48px;
+    line-height: 1.14;
+   
+}
+
+@media screen and (min-width: $desktop) {
+    
+    font-size: 58px;
+    line-height: 1.13;
+
+}
+}

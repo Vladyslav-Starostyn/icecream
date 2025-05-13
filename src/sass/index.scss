@@ -1,0 +1,19 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+// general styles
+@import './helpers/vars';
+@import './helpers/mixines';
+@import './helpers/placeholders';
+@import './helpers/general-styles';
+
+// component styles
+@import './components/header/header';
+@import './components/hero/hero';
+
+@import './components/products/products';
+@import './components/about/about';
+@import './components/advantages-gallery/advantages-gallery';
+@import './components/reviews/reviews';
+@import './components/contacts/contacts';
+@import './components/footer/footer';
+@import './components/modal/modal';
+

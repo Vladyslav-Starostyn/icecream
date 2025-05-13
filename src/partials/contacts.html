@@ -1,0 +1,175 @@
+<section class="contacts">
+  <div class="contacts__container container">
+    <h2 class="visually-hidden" id="contacts">contacts</h2>
+    <ul class="contacts__list">
+      <li class="card">
+        <p class="card__cafe">CAFE</p>
+        <h3 class="card__title">Chicago</h3>
+        <p class="card__text">
+          Fusce ut velit laoreet, tempus arcu molestie vulputate
+        </p>
+        <ul class="card__list">
+          <li class="card__item">
+            <p class="card__days">Monday - Friday</p>
+            <p class="card__time">06:00 AM - 10:00 PM</p>
+          </li>
+          <li class="card__item">
+            <p class="card__days">Saturday - Sunday</p>
+            <p class="card__time">08:00 AM - 16:00 PM</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a class="card__link link" href="tel:+61(0)383766284"
+              >+61(0) 383 766 284</a
+            >
+          </li>
+          <li>
+            <a class="card__link link" href="mailto:noreply@envato.com"
+              >noreply@envato.com</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="card">
+        <p class="card__cafe card__cafe--foodtruck">FOODTRUCK</p>
+        <h3 class="card__title">Los Angeles</h3>
+        <p class="card__text">
+          Fusce ut velit laoreet, tempus arcu molestie vulputate
+        </p>
+        <ul class="card__list">
+          <li class="card__item">
+            <p class="card__days">Monday - Friday</p>
+            <p class="card__time">06:00 AM - 10:00 PM</p>
+          </li>
+          <li class="card__item">
+            <p class="card__days">Saturday - Sunday</p>
+            <p class="card__time">08:00 AM - 16:00 PM</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a class="card__link link" href="tel:+61(0)383766284"
+              >+61(0) 383 766 284</a
+            >
+          </li>
+          <li>
+            <a class="card__link link" href="mailto:noreply@envato.com"
+              >noreply@envato.com</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="card">
+        <p class="card__cafe">CAFE</p>
+        <h3 class="card__title">New York</h3>
+        <p class="card__text">
+          Fusce ut velit laoreet, tempus arcu molestie vulputate
+        </p>
+        <ul class="card__list">
+          <li class="card__item">
+            <p class="card__days">Monday - Friday</p>
+            <p class="card__time">06:00 AM - 10:00 PM</p>
+          </li>
+          <li class="card__item">
+            <p class="card__days">Saturday - Sunday</p>
+            <p class="card__time">08:00 AM - 16:00 PM</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a class="card__link link" href="tel:+61(0)383766284"
+              >+61(0) 383 766 284</a
+            >
+          </li>
+          <li>
+            <a class="card__link link" href="mailto:noreply@envato.coml"
+              >noreply@envato.com</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="contacts__secondlist">
+      <li class="contacts__seconditem">
+        <button
+          class="contacts__button button"
+          type="button"
+          data-modal-two-open
+        >
+          Our Locations
+          <svg class="button-icon" width="5" height="8">
+            <use href="./images/symbol-defs.svg#icon-btn-arrow"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="contacts__seconditem">
+        <button
+          class="contacts__button contacts__button--second button"
+          type="button"
+          data-modal-two-open
+        >
+          Franchise
+          <svg class="button-icon" width="5" height="8">
+            <use href="./images/symbol-defs.svg#icon-Vector-1"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+<div class="backdrop is-hidden" data-modal-two>
+  <div class="modal-contacts">
+    <button class="modal-contacts__close" type="button" data-modal-two-close>
+      <svg width="18px" height="18px">
+        <use href="images/symbol-defs.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+    <p class="modal-text">Our Locations</p>
+    
+    <div id="map" class="map"></div>
+  </div>
+</div>
+
+<script>
+  function initMap() 
+  {
+    var element = document.getElementById('map');
+    var options = {
+      zoom: 5,
+      center: {lat: 49.8382600, lng: 24.0232400}
+    };
+
+    var myMap = new google.maps.Map(element, options);
+
+    addMarker({lat: 50.450181, lng: 30.524002});
+    addMarker({lat: 50.3526900, lng: 30.9550100});
+    addMarker({lat: 46.3017, lng: 30.6569});
+    addMarker({lat: 50.0880400, lng: 14.4207600});
+    addMarker({lat: 46.4774700, lng: 30.7326200});
+    addMarker({lat: 48.9215000, lng: 24.7097200});
+    addMarker({lat: 51.0480100, lng: 31.8868800});
+
+    function addMarker(coordinates) {
+      var marker = new google.maps.Marker({
+      position: coordinates,
+      map: myMap,
+      icon: ''
+    });
+
+        var InfoWindow = new google.maps.InfoWindow ({
+      content: '<p>ICE CREAM MADE WITH PASSION</p>'
+    });
+
+    marker.addListener('click', function(){
+      InfoWindow.open(myMap, marker);
+    });
+    }
+  }
+
+</script>
+
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWIUmyRwKFYm6KU9MXQXTxf6au9fplZcA&callback=initMap&v=weekly"
+defer
+>

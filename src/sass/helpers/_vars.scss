@@ -1,0 +1,26 @@
+:root {
+  --dark-pink-color: #d41443;
+  --light-pink-color: #ffa5ba;
+  --primary-white-color: #ffffff;
+  --product-pink-color: #ffb8ca;
+  --product-creamy-color: #f0d1a5;
+  --mobile-menu-bg-color: #e17992;
+  --mobile-menu-border-color: #e18298;
+  --product-green-color: #c2e297;
+  --primary-black-color: #000000;
+  --text-gray-color: #907e82;
+  --product-bg-color: #e5e5e5;
+  --howitsmade-bg-color: #fff5f6;
+  --review-bg-color: #fafafa;
+  --review-element-color: #e1e1e1;
+  --icon-bg-color: #fea5bb;
+  --review-bg-color: #fafafa;
+  --review-element-color: #e1e1e1;
+  --button-bg-hover-color: #ecebeb;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
+}
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;

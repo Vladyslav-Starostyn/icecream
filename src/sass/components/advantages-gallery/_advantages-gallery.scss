@@ -1,0 +1,320 @@
+// advantages section styles
+
+.advantages {
+  padding-top: 0;
+
+  background-color: var(--howitsmade-bg-color);
+}
+
+.advantages__list {
+  text-align: left;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: -60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: -30px;
+  }
+}
+.advantages__item {
+  text-align: left;
+  @media screen and (max-width: 767.98px) {
+    max-width: 230px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - 60px);
+    margin-left: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 60px);
+    margin-left: 30px;
+  }
+}
+
+.advantages__item {
+  display: inline-block;
+  transition: transform var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(214, 16, 66, 0.3);
+  }
+  &:first-child::before {
+    content: url('../images/mobile/mob-udder-bucket-1x.png');
+  }
+  &:nth-child(2)::before {
+    content: url('../images/mobile/mob-apple-bucket-1x.png');
+  }
+  &:last-child::before {
+    content: url('../images/mobile/mob-heart-1x.png');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    &:first-child::before {
+      content: '';
+      display: block;
+      width: 33px;
+      height: 50px;
+      background-size: contain;
+      background-image: url('../images/mobile/mob-udder-bucket-2x.png');
+    }
+    &:nth-child(2)::before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+      background-image: url('../images/mobile/mob-apple-bucket-2x.png');
+    }
+    &:last-child::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 50px;
+      background-size: contain;
+      background-image: url('../images/mobile/mob-heart-2x.png');
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__number {
+  display: block;
+  @extend %secondary-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dark-pink-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+    margin-top: 36px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+    margin-top: 40px;
+  }
+}
+
+.advantages__text {
+  @include font-set(12px, 700, 1.7);
+  letter-spacing: 0.02em;
+  color: var(--primary-black-color);
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+
+// gallery section styles
+.gallery {
+  padding-top: 80px;
+  background: linear-gradient(
+    180deg,
+    var(--howitsmade-bg-color) 40%,
+    var(--primary-white-color) 40%
+  );
+  @media screen and (min-width: $tablet) {
+    padding-top: 126px;
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 57%,
+      var(--primary-white-color) 40%
+    );
+  }
+  @media screen and (min-width: $desktop) {
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 52%,
+      var(--primary-white-color) 40%
+    );
+  }
+}
+.gallery-box {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 4px;
+
+  @media screen and (min-width: $tablet) {
+    grid-gap: 6px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+  }
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.gallery__item {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border-radius: 20px;
+
+  transition: transform var(--duration) linear;
+  &:focus,
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 7;
+  }
+}
+.gallery__item--2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  }
+}
+
+.gallery__item--3 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  }
+}
+
+.gallery__item--4 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+}
+
+.gallery__item--5 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 10;
+  }
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  }
+}
+
+.gallery__item--7 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  }
+}
+
+.gallery__item--8 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 5;
+  }
+}
+
+.gallery__item--9 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 8;
+  }
+}
+
+.gallery__item--10 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 7;
+  }
+}
